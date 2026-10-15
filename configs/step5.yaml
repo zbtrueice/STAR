@@ -1,0 +1,25 @@
+# Step 5 -- mechanism operating-regime experiments (F4/H4) configuration
+# Non-invasive: does not modify default.yaml / step4.yaml; this file stacks on top of
+# them. Algorithm parameters follow default.yaml (no tuning).
+
+step5:
+  # 5-seed paired list shared with step4 (F4 uses all; H4 uses the h4_seeds subset)
+  seeds: [42, 7, 123, 2024, 555]
+
+  # ---- F4: Dense Initialization Robustness ----
+  f4_n: 40
+  cluster_radii_m: [500, 1000, 1500]
+  f4_cr_thresholds: [1000, 2000, 3000]   # record the step at which cluster_radius_max first exceeds each threshold
+  f4_redundancy_grid: 250                 # overlap-ratio evaluation grid (evaluation only)
+
+  # ---- H4: Communication-Isolated Hole ----
+  h4_n: 40
+  h4_seeds: [42, 7, 123]
+  h4_center: [5000, 5000]
+  h4_isolation_factor: 1.0                # nearest agent must be > factor x C_th from the hole center
+  h4_recover_steps: 300
+  h4_recovery_frac: 0.2                   # recovery success: residual <= frac x injected area
+
+  # ---- Shared ----
+  # The fluid arm uses the current force-calibrated configuration
+  # (k = 1.9367e6; old/new force mean ratio 5533, not metric fitting)

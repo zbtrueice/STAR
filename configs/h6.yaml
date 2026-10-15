@@ -1,0 +1,15 @@
+# H6 -- Hole-fill mechanism boundary factorial experiment configuration (stacks on
+# default/step4/step5; non-invasive)
+
+h6:
+  seeds: [42, 7, 123, 2024, 555]      # >= 5 seeds/combination, paired OFF/ON
+  n: 40
+  center: [5000, 5000]                # hole center (ROI center)
+  d_ratios: [0.7, 0.9, 1.0, 1.1, 1.3] # factor A: d_target = ratio x C_th
+  hole_diameters_m: [3000, 4000, 5000, 6000]   # factor B: target hole diameter
+  recover_steps: 300
+  recovery_frac: 0.2                  # success: residual <= frac x injected area
+  max_removed_total: 20               # total removal cap (protects the layout)
+  phase2_max_extra: 10                # Phase 2 (hole expansion) extra-removal cap
+  zone_margin: 750                    # measurement zone = actual_d + margin
+  record_every: 1                     # per-step time-series recording (needed for oscillation judgement)

@@ -1,0 +1,66 @@
+# STAR v3 -- fully distributed simulation configuration
+# Compared against the v2 global version to quantify the cost of full distribution;
+# adds communication-failure / packet-loss simulation
+
+environment:
+  width: 10000
+  height: 10000
+  metric_grid: 250          # coverage-statistics grid (evaluation only; not an algorithm input)
+
+usv:
+  number: 100
+  high_ratio: 0.2
+  medium_ratio: 0.5
+  low_ratio: 0.3
+  high_radius: 1500
+  medium_radius: 1000
+  low_radius: 500
+  v_max: 200
+  launch_cluster: true
+  cluster_scale: 0.15
+
+communication:
+  radius: 3000              # communication radius C_th
+  drop_rate: 0.0            # per-link packet-loss rate per step (fault injection, 0 = no faults)
+  loss_seed: 1              # packet-loss random seed
+
+simulation:
+  iterations: 400
+  timestep: 0.1
+  fluid_steps: 120
+  evfa_steps: 280
+
+# Stage 1: local fluid diffusion
+fluid:
+  interaction_radius: 1500
+  k_fluid: 1.9367e+06        # force-calibrated main configuration (= 350 x old/new force mean
+                           # ratio 5533; pure force-scale matching, not metric fitting; the
+                           # literal 350 yields forces ~4 orders of magnitude smaller in SPH
+                           # units -> a nearly static fluid stage; see
+                           # results/mechanism_fix/regression_report.md)
+  rest_density: 1.4e-6
+  viscosity: 25
+  drag: 0.06
+  boundary_k: 2.0
+
+# Stage 3: local VEVF
+vevf:
+  k_vertex: 500
+  k_edge: 300
+  k_centroid: 400
+  f_max: 600
+
+# Hole filling
+hole_fill:
+  enabled: true             # strictly zero force when false
+  k_target: 500
+  f_max: 600
+  grid_res: 500             # grid sampling resolution for local deficit detection (m)
+  search_radius: 3000       # upper bound of the search radius; in code effective = min(search_radius, communication.radius)
+  conflict_radius: null     # threshold for "same hole" judgement; null -> 0.3*self.radius
+
+# Comparison-experiment settings
+experiment:
+  seeds: [42, 7, 123]
+  n_grids: [100, 40]        # sufficient / near-critical redundancy scenarios
+  drop_rates: [0.0, 0.3]    # packet-loss sweep

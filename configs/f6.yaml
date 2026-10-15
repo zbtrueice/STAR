@@ -1,0 +1,14 @@
+# F6 -- Fluid parameter robustness sweep (k_fluid multiplier sweep)
+# Non-invasive: stacks on default/step4/step5.yaml; all other settings fully follow F4
+# (N=40, initialization, step budget, VEVF/baselines unchanged). No parameter search,
+# no tuning, no algorithm changes.
+
+f6:
+  n: 40
+  cluster_radii_m: [500, 1000]          # F4 cluster-radius subset
+  seeds: [42, 7, 123]                   # F4 paired-seeds subset
+  k_base: 1.9367e+06                      # current force-calibration point (used by F4)
+  k_multipliers: [0.0, 0.5, 1.0, 2.0]   # 0.0 = VEVF-only baseline (no fluid stage)
+  record_every: 5
+  fluid_end_step: 120                   # fixed fluid-stage budget (= simulation.fluid_steps)
+  overlap_grid: 250                     # overlap-ratio evaluation grid (evaluation only)

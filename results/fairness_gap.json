@@ -1,0 +1,212 @@
+{
+  "n100_seed42_drop0_star": {
+    "fairness": 0.6987,
+    "gap_m": 0.4,
+    "k90": 1,
+    "coverage": 1.0,
+    "energy": 632.7
+  },
+  "n100_seed42_drop0_lloyd": {
+    "fairness": 0.615,
+    "gap_m": 73.7,
+    "k90": 1,
+    "coverage": 0.9688,
+    "energy": 270.4
+  },
+  "n100_seed42_drop0_vfa": {
+    "fairness": 0.2214,
+    "gap_m": 1271.2,
+    "k90": 1,
+    "coverage": 0.3787,
+    "energy": 112.0
+  },
+  "n100_seed42_drop0_pso": {
+    "fairness": 0.5981,
+    "gap_m": 119.5,
+    "k90": 1,
+    "coverage": 0.9675,
+    "energy": 783.7
+  },
+  "n100_seed42_drop0_random": {
+    "fairness": 0.4329,
+    "gap_m": 364.7,
+    "k90": 1,
+    "coverage": 0.8431,
+    "energy": 356.7
+  },
+  "n100_seed7_drop0_star": {
+    "fairness": 0.652,
+    "gap_m": 0.0,
+    "k90": 1,
+    "coverage": 1.0,
+    "energy": 639.5
+  },
+  "n100_seed7_drop0_lloyd": {
+    "fairness": 0.6656,
+    "gap_m": 64.8,
+    "k90": 1,
+    "coverage": 0.98,
+    "energy": 264.6
+  },
+  "n100_seed7_drop0_vfa": {
+    "fairness": 0.4203,
+    "gap_m": 1396.5,
+    "k90": 1,
+    "coverage": 0.4088,
+    "energy": 133.8
+  },
+  "n100_seed7_drop0_pso": {
+    "fairness": 0.642,
+    "gap_m": 159.8,
+    "k90": 1,
+    "coverage": 0.97,
+    "energy": 782.7
+  },
+  "n100_seed7_drop0_random": {
+    "fairness": 0.6522,
+    "gap_m": 285.8,
+    "k90": 1,
+    "coverage": 0.8825,
+    "energy": 360.4
+  },
+  "n100_seed123_drop0_star": {
+    "fairness": 0.6097,
+    "gap_m": 0.5,
+    "k90": 1,
+    "coverage": 1.0,
+    "energy": 633.6
+  },
+  "n100_seed123_drop0_lloyd": {
+    "fairness": 0.7225,
+    "gap_m": 29.0,
+    "k90": 1,
+    "coverage": 0.9969,
+    "energy": 274.1
+  },
+  "n100_seed123_drop0_vfa": {
+    "fairness": 0.5146,
+    "gap_m": 1320.9,
+    "k90": 1,
+    "coverage": 0.4444,
+    "energy": 113.0
+  },
+  "n100_seed123_drop0_pso": {
+    "fairness": 0.6558,
+    "gap_m": 106.5,
+    "k90": 1,
+    "coverage": 0.9681,
+    "energy": 785.0
+  },
+  "n100_seed123_drop0_random": {
+    "fairness": 0.3339,
+    "gap_m": 410.3,
+    "k90": 1,
+    "coverage": 0.8031,
+    "energy": 351.0
+  },
+  "n40_seed42_drop0_star": {
+    "fairness": 0.845,
+    "gap_m": 153.4,
+    "k90": 1,
+    "coverage": 0.9525,
+    "energy": 236.3
+  },
+  "n40_seed42_drop0_lloyd": {
+    "fairness": 0.6643,
+    "gap_m": 301.0,
+    "k90": 1,
+    "coverage": 0.8425,
+    "energy": 138.4
+  },
+  "n40_seed42_drop0_vfa": {
+    "fairness": 0.4434,
+    "gap_m": 1705.2,
+    "k90": 1,
+    "coverage": 0.3488,
+    "energy": 48.5
+  },
+  "n40_seed42_drop0_pso": {
+    "fairness": 0.7497,
+    "gap_m": 694.0,
+    "k90": 1,
+    "coverage": 0.7694,
+    "energy": 311.9
+  },
+  "n40_seed42_drop0_random": {
+    "fairness": 0.4,
+    "gap_m": 662.5,
+    "k90": 1,
+    "coverage": 0.68,
+    "energy": 149.7
+  },
+  "n40_seed7_drop0_star": {
+    "fairness": 0.7906,
+    "gap_m": 174.5,
+    "k90": 1,
+    "coverage": 0.9475,
+    "energy": 237.5
+  },
+  "n40_seed7_drop0_lloyd": {
+    "fairness": 0.7786,
+    "gap_m": 271.0,
+    "k90": 1,
+    "coverage": 0.9025,
+    "energy": 135.8
+  },
+  "n40_seed7_drop0_vfa": {
+    "fairness": 0.5432,
+    "gap_m": 1834.6,
+    "k90": 1,
+    "coverage": 0.3469,
+    "energy": 48.3
+  },
+  "n40_seed7_drop0_pso": {
+    "fairness": 0.664,
+    "gap_m": 758.8,
+    "k90": 1,
+    "coverage": 0.7612,
+    "energy": 309.2
+  },
+  "n40_seed7_drop0_random": {
+    "fairness": 0.3711,
+    "gap_m": 673.2,
+    "k90": 1,
+    "coverage": 0.7312,
+    "energy": 143.3
+  },
+  "n40_seed123_drop0_star": {
+    "fairness": 0.9121,
+    "gap_m": 173.1,
+    "k90": 1,
+    "coverage": 0.9519,
+    "energy": 240.0
+  },
+  "n40_seed123_drop0_lloyd": {
+    "fairness": 0.7443,
+    "gap_m": 315.8,
+    "k90": 1,
+    "coverage": 0.87,
+    "energy": 133.7
+  },
+  "n40_seed123_drop0_vfa": {
+    "fairness": 0.3199,
+    "gap_m": 1811.3,
+    "k90": 1,
+    "coverage": 0.3606,
+    "energy": 48.2
+  },
+  "n40_seed123_drop0_pso": {
+    "fairness": 0.7818,
+    "gap_m": 697.6,
+    "k90": 1,
+    "coverage": 0.7788,
+    "energy": 313.0
+  },
+  "n40_seed123_drop0_random": {
+    "fairness": 0.2578,
+    "gap_m": 1011.2,
+    "k90": 1,
+    "coverage": 0.5988,
+    "energy": 142.1
+  }
+}
