@@ -1,10 +1,10 @@
 # Distributed Coverage Control for Heterogeneous USV Swarms with Local Geometric Optimization and Conditional Hole Recovery
 
-**Authors**: (to be completed)
+**Authors**: Kexin Peng ^1^, Jiangang Jin ^1^, Bin Zeng ^2^,^∗^
 
-**Affiliation**: (to be completed)
+**Affiliations**: ^1^ School of Naval Architecture, Ocean and Civil Engineering, Shanghai Jiao Tong University, Shanghai, China; ^2^ Naval University of Engineering, Wuhan, Hubei, China
 
-**Correspondence**: (to be completed)
+**Correspondence**: Bin Zeng (^∗^ corresponding author)
 
 ---
 
