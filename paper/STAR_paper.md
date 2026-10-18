@@ -396,7 +396,7 @@ Per-link, per-step independent Bernoulli loss is the simulation's communication 
 
 ### 4.6. Sensing Heterogeneity Sensitivity
 
-Sensing heterogeneity is the design premise of the Laguerre partition; does its *degree* materially change final coverage? (The full sweep is a small single-panel figure; we report its numbers here directly and archive the figure with the repository data.)
+Sensing heterogeneity is the design premise of the Laguerre partition; this section checks whether its *degree* materially changes final coverage.
 
 Across homogeneous, mild, medium, and strong radius spreads ($N=40$, 12 seeds, mean±SD), coverage stays in the narrow $0.961$–$0.978$ band (homogeneous $0.963$, mild $0.961$, medium $0.971$, strong $0.978$), with a marginal non-monotonic dip at the mild level.
 
