@@ -4,13 +4,13 @@ run_demo_figures.py — recording runner for the reviewer-grade "figure pack"
 (N4 evolution snapshots, N5 convergence error-shadow, N6 fluid mechanism,
 and full-axis baseline sweep curves).
 
-NON-INVASIVE: this module only *imports* the locked v3 core/algorithms/baselines;
-it does NOT modify any file under v3/. It drives the identical v3 three-stage
+NON-INVASIVE: this module only *imports* the package's src core/algorithms/baselines;
+it does NOT modify any file under src/ or results/. It drives the identical three-stage
 timeline (fluid -> evfa) with the same FluidParams/VEVFParams/HoleFillParams, but
 additionally snapshots positions at phase boundaries + records the per-step
 coverage curve + captures the fluid-stage trace needed by the mechanism figure.
 
-Data written to v3/results/demo_figs/ (incremental, crash-safe):
+Data written to results/demo_figs/ (incremental, crash-safe):
   snapshots_{method}_{n}_{seed}.npz     positions at 4 evolution phases      (Fig: N4)
   convergence_{n}_{seed}.npz            per-step coverage curves, all methods (Fig: N5)
   fluxtrace_{n}_{seed}.npz              positions at several fluid steps     (Fig: N6)

@@ -41,5 +41,5 @@ python results/repro_check/baseline_config_regression/reg_diff.py
 
 The first command regenerates `reg_results_after.json` (overwrites the archived
 copy); the second compares it with the archived `reg_results_before.json` and
-must print `RESULT: BIT-IDENTICAL`. Runtime is a few minutes with the packaged
-`star_env` Python environment.
+must print `RESULT: BIT-IDENTICAL`. Runtime is a few minutes with a standard
+Python environment (see `requirements.txt`).

@@ -28,6 +28,7 @@ STAR-release/
 │   ├── run_v4_experiments.py    # Single-suite runner (smoke / paper_core / all)
 │   ├── run_demo_figures.py      # Deployment trajectories + baseline sweep rows -> results/demo_figs/
 │   ├── significance_test.py     # Paired t-test + Wilcoxon significance tests
+│   ├── compute_fairness_12seeds.py  # 12-seed fairness index / minimax-gap archive
 │   └── repro_check.py           # 120-run reproducibility self-check vs. shipped results
 ├── tests/
 │   └── test_mechanism.py        # 13 mechanism unit tests (fluid SPH / timing / hole recovery)
@@ -55,6 +56,7 @@ STAR-release/
     ├── mech_verify/             # Mechanism operating-regime data (step4: H2/H3, step5: F4/H4, F6/, H6/)
     ├── mechanism_fix/           # Mechanism-fix audits, unit-test report, 60-case regression
     ├── p0_controls/             # Raw 2x2 hole-fill x packet-loss runs (S2)
+    ├── p0_analysis_v2/          # Paired statistics for 2x2 / two-stage contrasts (S2, Table 5)
     ├── p3_fluid_redesign/       # Fluid redesign study (S4, pre-correction design evidence)
     └── repro_check/benchmark_repro.csv          # 120-run reproducibility self-check result
 ```

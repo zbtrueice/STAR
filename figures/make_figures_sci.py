@@ -21,7 +21,7 @@ contributions. Reads ONLY existing data -- no simulation re-run.
          (a) comm radius (b) packet loss (c) swarm size
   FigR5  ablation (§7.4): (a) coverage contribution (b) reliability
 
-Output -> v3/figures/beauty3/
+Output -> figures/beauty3/
 """
 import csv
 import io

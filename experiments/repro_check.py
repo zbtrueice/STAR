@@ -2,9 +2,9 @@
 """Reproduction self-check of the submission package: benchmark suite (N=40/100 x 12
 seeds x 5 methods).
 
-Reference baseline: v3/results/suite/all_runs.csv (the data source of every number in
-the paper).
-Run: star_env\Scripts\python.exe experiments/repro_check.py
+Reference baseline: results/suite/all_runs.csv (shipped in this package; the data
+source of every number in the paper).
+Run: python experiments/repro_check.py
 Output: results/repro_check/benchmark_repro.csv + console comparison summary.
 """
 import os

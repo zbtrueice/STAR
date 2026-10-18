@@ -149,7 +149,7 @@ def run_episode(cfg, seed, mode='star', comm_radius=None, drop_rate=0.0,
     hp = HoleFillParams(**{k: c['hole_fill'][k] for k in c['hole_fill']})
 
     if mode == 'star':
-        # Timing protocol (identical to v3/run_suites.py):
+        # Timing protocol (identical to run_suites.py):
         # broadcast the current state -> compute forces from the current neighbor
         # cache -> integrate -> broadcast again to refresh the cache
         sim.broadcast()          # must broadcast before the first dynamics step

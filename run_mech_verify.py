@@ -15,9 +15,9 @@ Step 3  hole      after a stable layout, remove 1-3 vessels to create a known ho
                   coverage/hole area/largest uncovered connected component/recovery
                   time/energy/detection rate
 
-NON-INVASIVE: only imports the locked v3 core/algorithms/baselines; modifies no locked
-file.
-Data -> v3/results/mech_verify/ ; figures -> v3/figures/mech_verify/.
+NON-INVASIVE: only imports the package's src core/algorithms/baselines; modifies no
+locked file.
+Data -> results/mech_verify/ ; figures -> figures/mech_verify/.
 """
 import argparse
 import copy
