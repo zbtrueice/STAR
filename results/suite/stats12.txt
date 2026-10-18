@@ -1,19 +1,19 @@
 rows=504 seeds=12
-N=40 star   0.958+-0.008
-N=40 lloyd  0.876+-0.019
-N=40 vfa    0.371+-0.029
-N=40 pso    0.782+-0.042
-N=40 random 0.668+-0.036
-  N=40 STAR-vs-lloyd  t=16.84 p=0.0000 wilcoxon=0.0005
-  N=40 STAR-vs-vfa    t=68.50 p=0.0000 wilcoxon=0.0005
-  N=40 STAR-vs-pso    t=14.11 p=0.0000 wilcoxon=0.0005
-  N=40 STAR-vs-random t=26.05 p=0.0000 wilcoxon=0.0005
-N=100 star   1.000+-0.001
-N=100 lloyd  0.982+-0.007
-N=100 vfa    0.438+-0.026
-N=100 pso    0.962+-0.021
-N=100 random 0.885+-0.039
-  N=100 STAR-vs-lloyd  t=8.24 p=0.0000 wilcoxon=0.0005
-  N=100 STAR-vs-vfa    t=76.09 p=0.0000 wilcoxon=0.0005
-  N=100 STAR-vs-pso    t=6.24 p=0.0001 wilcoxon=0.0005
-  N=100 STAR-vs-random t=10.24 p=0.0000 wilcoxon=0.0005
+N=40 star   0.9707+-0.0048
+N=40 lloyd  0.8760+-0.0188
+N=40 vfa    0.3707+-0.0289
+N=40 pso    0.7818+-0.0418
+N=40 random 0.6683+-0.0360
+  N=40 STAR-vs-lloyd  t=17.60 p=0.0000 wilcoxon=0.0005
+  N=40 STAR-vs-vfa    t=72.71 p=0.0000 wilcoxon=0.0005
+  N=40 STAR-vs-pso    t=16.04 p=0.0000 wilcoxon=0.0005
+  N=40 STAR-vs-random t=30.07 p=0.0000 wilcoxon=0.0005
+N=100 star   0.9998+-0.0003
+N=100 lloyd  0.9819+-0.0074
+N=100 vfa    0.4382+-0.0257
+N=100 pso    0.9619+-0.0212
+N=100 random 0.8846+-0.0388
+  N=100 STAR-vs-lloyd  t=8.47 p=0.0000 wilcoxon=0.0005
+  N=100 STAR-vs-vfa    t=76.07 p=0.0000 wilcoxon=0.0005
+  N=100 STAR-vs-pso    t=6.21 p=0.0001 wilcoxon=0.0005
+  N=100 STAR-vs-random t=10.26 p=0.0000 wilcoxon=0.0005
