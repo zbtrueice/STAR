@@ -3,6 +3,43 @@ interface)."""
 import numpy as np
 
 
+def fairness_index(swarm, diagram=None):
+    """Jain fairness of Laguerre cell areas vs sensing areas (target: r^2).
+
+    Allocation fairness J (Section 3.6 of the manuscript): each USV's
+    allocated responsibility is its (non-empty) power-cell area, and its
+    sensing demand is the squared sensing radius r_i^2, scaled to the same
+    total.  J is the Jain index of the ratio (cell area / demand):
+    1.0 means every active USV carries exactly its demand-proportional load.
+    Only USVs with a non-empty power cell carry allocated load; empty-cell
+    USVs are sensing-redundant (their load is 0 by design, not unfairness)
+    and are excluded (Section 3.6).
+    """
+    if diagram is None:
+        return 0.0
+    active = diagram.areas > 1e-6
+    if not active.any():
+        return 0.0
+    areas = diagram.areas[active]
+    demand = (swarm.radii() ** 2)[active]
+    demand = demand / demand.sum() * areas.sum()
+    x = areas / np.maximum(demand, 1e-9)
+    return float((x.sum() ** 2) / (len(x) * (x ** 2).sum())) if len(x) else 0.0
+
+
+def minimax_gap(swarm, diagram):
+    """Mean over USVs of (worst distance from site to its cell) - radius.
+
+    0 means every cell is fully covered by its owner's sensing disk.
+    Empty-cell USVs are excluded (no cell -> no gap).
+    """
+    active = diagram.covering_radius > 0.0
+    if not active.any():
+        return 0.0
+    gap = diagram.covering_radius[active] - swarm.radii()[active]
+    return float(np.maximum(gap, 0.0).mean())
+
+
 def energy(sim):
     return sum(100.0 - a.energy for a in sim.agents)
 

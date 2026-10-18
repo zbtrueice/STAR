@@ -87,6 +87,6 @@ baselines:
 
 # Comparison-experiment settings
 experiment:
-  seeds: [42, 7, 123]
+  seeds: [42, 7, 123, 2024, 555, 777, 1000, 2025, 666, 314, 2026, 888]
   n_grids: [100, 40]        # sufficient / near-critical redundancy scenarios
   drop_rates: [0.0, 0.3]    # packet-loss sweep
