@@ -11,8 +11,8 @@ def random_forces(agents, step_size=80.0):
     return forces
 
 
-def stage_random(sim, dt, steps):
+def stage_random(sim, dt, steps, step_size=80.0):
     for _ in range(steps):
-        f = random_forces(sim.agents)
+        f = random_forces(sim.agents, step_size)
         sim.step(f, dt)
     return sim

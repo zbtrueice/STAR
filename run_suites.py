@@ -182,13 +182,31 @@ def run_episode(cfg, seed, mode='star', comm_radius=None, drop_rate=0.0,
             maybe_snapshot()
         phase('final')
     else:
+        # Baselines run on the shared configuration (configs/default.yaml -> baselines);
+        # the values mirror the module defaults of src/algorithms/baselines/*.py so that
+        # the manuscript statement about the shared configuration file is literal. Old
+        # configs without the baselines section fall back to the same module defaults.
         n_steps = n_fluid + n_evfa
-        stage = {'random': rand_mod.stage_random,
-                 'vfa': vfa_mod.stage_vfa,
-                 'lloyd': lloyd_mod.stage_lloyd,
-                 'pso': pso_mod.stage_pso}[mode]
+        bl = c.get('baselines', {}) or {}
+        vf_defaults = dict(k_rep=1.0e8, k_att=2.0, d_th=650.0, f_max=40.0,
+                           k_target=300.0, drag=0.3, boundary_k=3.0, grid_res=500.0)
+        vf_defaults.update(bl.get('vfa', {}) or {})
+        vf_params = vfa_mod.VFAParams(**vf_defaults)
+        ps_defaults = dict(w=0.3, c1=1.2, c2=0.4, v_cap=200.0, grid_res=500.0)
+        ps_defaults.update(bl.get('pso', {}) or {})
+        ps_params = pso_mod.PSOParams(**ps_defaults)
+        lloyd_cfg = dict(gain=0.5, drag=0.5)
+        lloyd_cfg.update(bl.get('lloyd', {}) or {})
+        rn_step = (bl.get('random', {}) or {}).get('step_size', 80.0)
         for _ in range(n_steps):
-            stage(sim, dt, 1)
+            if mode == 'random':
+                rand_mod.stage_random(sim, dt, 1, step_size=rn_step)
+            elif mode == 'vfa':
+                vfa_mod.stage_vfa(sim, dt, 1, vf_params)
+            elif mode == 'lloyd':
+                lloyd_mod.stage_lloyd(sim, dt, 1, lloyd_cfg['gain'], lloyd_cfg['drag'])
+            elif mode == 'pso':
+                pso_mod.stage_pso(sim, dt, 1, ps_params)
             maybe_snapshot()
 
     snapshot()

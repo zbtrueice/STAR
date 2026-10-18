@@ -59,6 +59,32 @@ hole_fill:
   search_radius: 3000       # upper bound of the search radius; in code effective = min(search_radius, communication.radius)
   conflict_radius: null     # threshold for "same hole" judgement; null -> 0.3*self.radius
 
+# Baseline (comparison) algorithm parameters. These mirror the hard-coded module
+# defaults of src/algorithms/baselines/*.py so that the manuscript statement
+# "baseline hyperparameters come from the shared configuration file" is literal;
+# run_suites.py reads this section and passes the values explicitly.
+baselines:
+  lloyd:
+    gain: 0.5
+    drag: 0.5
+  vfa:
+    k_rep: 1.0e8
+    k_att: 2.0
+    d_th: 650.0
+    f_max: 40.0
+    k_target: 300.0
+    drag: 0.3
+    boundary_k: 3.0
+    grid_res: 500.0
+  pso:
+    w: 0.3
+    c1: 1.2
+    c2: 0.4
+    v_cap: 200.0
+    grid_res: 500.0
+  random:
+    step_size: 80.0
+
 # Comparison-experiment settings
 experiment:
   seeds: [42, 7, 123]
